@@ -8,6 +8,7 @@
     <script src="/script.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/script_jquery.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 
@@ -18,7 +19,45 @@
         <h1> Jquery-Vanilla cheatsheet</h1>
     </header>
 
+    <div class="info-window"></div>
+    <div class="jquery-info-window"></div>
     <main>
+        <section class="legend">
+            <h2>Legend</h2>
+            <p class="jquery legend-child"> JQUERY &rarr; Elements executing jquery code look like this one</p>
+            <br>
+            <p class="vanilla legend-child"> VANILLA JS &rarr; Elements executing vanilla js code look like this
+                one</p>
+        </section>
+        <section class="events">
+
+            <h2>How events work</h2>
+
+            <ul class="events-wrapper">
+
+                <li>
+                    <p>CLicking an html element</p><br>
+                    <button class="jquery j-2 jquery-btn"> Click me!</button>
+                    <button class="vanilla v-2 vanilla-btn"> Click me!</button>
+                </li>
+
+                <li class="e-3">
+                    <p> Double clicking an html element</p><br>
+                    <button class="jquery j-3 jquery-btn"> double-click me!</button>
+                    <button class="vanilla v-3 vanilla-btn"> double-Click me!</button>
+                </li>
+
+                <li class="e-6">
+
+                    <p> Hover an html element</p><br>
+                    <div class="jquery  j-6 radial-gradient"> jquery, hover over and check out!! </div>
+                    <br>
+                    <div class="vanilla v-6 radial-gradient"> Vanilla, hover over and check out!! </div>
+
+                </li>
+
+            </ul>
+        </section>
     </main>
 
 </body>
