@@ -1,6 +1,10 @@
 $(function () {
 
 
+    let infoWindow = $('.jquery-info-window')
+    let infoTimer;
+
+
     /* 1 - events */
 
     message("jquery script ready")
@@ -14,7 +18,6 @@ $(function () {
     $(".j-5").mousemove(
 
         function (event) {
-
             let positionj6 = [event.target.offsetTop, event.target.offsetLeft]
             let width = $(this).innerWidth();
             let height = $(this).innerHeight();
@@ -24,32 +27,31 @@ $(function () {
         }
     )
 
+    $(".j-6").on("input", () => message("User said : " + $('.j-6').val()))
+
     /* 2 - functions and slelectors*/
 
-    let listE6 = $('.ul-e6')
-    $(".j-6").click(() => {
+    let listF14 = $('.ul-f14')
+    $(".j-14").click(() => {
 
-        let appended = listE6.children().length + 1
-        listE6.append($(`<li><div class = "jquery">${appended} elements appended</div></li>`))
+        let appended = listF14.children().length + 1
+        listF14.append($(`<li><div class = "jquery">${appended} elements appended</div></li>`))
     })
 
-    $('.reset-e6').click(() => listE6.empty())
+    $('.reset-f14').click(() => listF14.empty())
 
 
 
     /* UTILS*/
 
-
     function message(msg) {
-        $('.jquery-info-window').text(msg);
-
+        infoWindow.text(msg);
         console.log(msg)
-        toggleInfoWindow();
-        setTimeout(toggleInfoWindow, 1500);
+        infoWindow.addClass("show-info");
+        clearTimeout(infoTimer);
+        infoTimer = setTimeout(() => infoWindow.removeClass("show-info"), 1500);
     }
 
-    function toggleInfoWindow() {
-        $('.jquery-info-window').toggleClass("show-info");
-    }
+
 
 })

@@ -60,12 +60,6 @@ main h2 {
     display: inline-block
 }
 
-.jquery-btn {
-
-    outline: none !important;
-
-}
-
 .vanilla {
     border: none;
     padding: 5px;
@@ -75,7 +69,7 @@ main h2 {
     display: inline-block
 }
 
-.vanilla-btn {
+.vanilla button {
     outline: none !important;
 }
 
@@ -96,13 +90,13 @@ main h2 {
 }
 
 
-.ul-e6 {
+.ul-f14 {
     display: flex;
     flex-direction: column;
 
 }
 
-.ul-e6 li {
+.ul-f14 li {
 
     margin-top: 20px
 }
@@ -119,6 +113,13 @@ main h2 {
     /* radial-gradient(at center, #3498db, #9b59b6);*/
 
 }
+
+button {
+
+    outline: none !important;
+
+}
+
 
 .info-window {
     position: fixed;

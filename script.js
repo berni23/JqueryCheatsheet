@@ -1,6 +1,7 @@
+let infoWindow = document.querySelector('.info-window');
+let infoTimer;
+
 message("vanilla script ready")
-
-
 
 
 document.querySelector(".v-2").addEventListener("click", () => message("vanilla element clicked!"))
@@ -22,34 +23,29 @@ document.querySelector(".v-5").addEventListener('mousemove',
     }
 )
 
-/* 2 - functios and slelectors*/
+
+let v6 = document.querySelector(".v-6")
+v6.addEventListener("input", () => message("User said: " + v6.value))
+/* 2 - functios and selectors*/
 
 
-listE6 = document.querySelector(".ul-e6")
+listF14 = document.querySelector(".ul-f14")
 
-document.querySelector(".v-6").addEventListener("click", function () {
+document.querySelector(".v-14").addEventListener("click", function () {
+    let appended = listF14.children.length + 1
+    let child = document.createElement('li')
+    child.innerHTML = `<div class = "vanilla">${appended} elements appended</div>`
+    listF14.appendChild(child)
+})
 
-
-        let appended = listE6.children.length + 1
-        let child = document.createElement('li')
-        child.innerHTML = `<div class = "vanilla">${appended} elements appended</div>`
-        listE6.appendChild(child)
-    }
-
-)
-
-
-
-
-$('.reset-e6').click(() => $(this).empty())
 
 // display a message to the user
-function message(msg) {
-    document.querySelector('.info-window').textContent = msg;
-    toggleInfoWindow();
-    setTimeout(toggleInfoWindow, 1500);
-}
 
-function toggleInfoWindow() {
-    document.querySelector('.info-window').classList.toggle("show-info");
+
+function message(msg) {
+    infoWindow.textContent = msg;
+    console.log(msg)
+    infoWindow.classList.add("show-info");
+    clearTimeout(infoTimer);
+    infoTimer = setTimeout(() => infoWindow.classList.remove("show-info"), 1500);
 }
