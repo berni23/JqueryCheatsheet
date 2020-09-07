@@ -7,7 +7,9 @@ document.querySelector(".v-2").addEventListener("click", () => message("vanilla 
 
 document.querySelector(".v-3").addEventListener("dblclick", () => message(" vanilla element double clicked!"))
 
-document.querySelector(".v-6").addEventListener('mousemove',
+document.addEventListener('keydown', () => document.querySelector('.v-4').textContent = (event.keyCode || event.which))
+
+document.querySelector(".v-5").addEventListener('mousemove',
 
     function (event) {
         let width = $(this).innerWidth();
@@ -20,6 +22,26 @@ document.querySelector(".v-6").addEventListener('mousemove',
     }
 )
 
+/* 2 - functios and slelectors*/
+
+
+listE6 = document.querySelector(".ul-e6")
+
+document.querySelector(".v-6").addEventListener("click", function () {
+
+
+        let appended = listE6.children.length + 1
+        let child = document.createElement('li')
+        child.innerHTML = `<div class = "vanilla">${appended} elements appended</div>`
+        listE6.appendChild(child)
+    }
+
+)
+
+
+
+
+$('.reset-e6').click(() => $(this).empty())
 
 // display a message to the user
 function message(msg) {
