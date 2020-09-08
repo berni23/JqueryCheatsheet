@@ -72,8 +72,8 @@
 
                 <li>
                     <p>Loading an image</p>
-                    <img class="img-e7" src=""></img><br>
-                    <button class="jquery j-7"> click to load an image</button>
+                    <img class="img-e7"></img><br>
+                    <!--<button class="jquery j-7"> click to load an image</button>-->
                     <button class="vanilla v-7">click to load an image</button>
 
                 </li>
@@ -107,7 +107,6 @@
 
                 <li>
                     <p>Hover over the squares</p>
-
 
                     <div class="jquery j-11" style="width:50px; height:50px;position:relative"> </div>
                     <div class="vanilla v-11" style="margin-left:20px;width:50px; height:50px"></div>
@@ -143,14 +142,40 @@
             <ul class="functionsSelectors-wrapper">
 
                 <li>
-                    <p>Create an html element dinamically on button pressed</p><br>
-                    <button class="jquery j-14 "> create div</button>
-                    <button class="vanilla v-14 "> create div</button>
-                    <button class="reset-f14 jquery " style="float:right">reset</button>
+                    <p> Create , append, prepend and remove an html element dinamically </p><br>
+                    <button class="jquery j-14 "> append</button>
+                    <button class="jquery j-16 "> prepend</button>
+                    <button class="j-15 jquery " style="margin-right:50px">remove</button>
+                    <button class="vanilla v-14" style="margin-left:50px "> append </button>
+                    <button class="vanilla v-16 "> prepend </button>
+                    <button class="v-15 vanilla ">remove</button>
                     <ul class="ul-f14">
-
                     </ul>
                 </li>
+                <li>
+                    <p> Create, add before and after </p><br>
+                    <button class="jquery j-17"> add before</button>
+                    <button class="jquery j-18" style="margin-right:50px"> add after</button>
+                    <button class="vanilla v-17" style="margin-left:50px"> add before </button>
+                    <button class="vanilla v-18"> add after </button>
+                    <ul class="ul-f17">
+                        <li class="li-f17">
+                            <div class="jquery" style="background-color:red">reference item</div>
+                        </li>
+                </li>
+            </ul>
+            </li>
+            <li>
+                <p> clone an element</p>
+                <button class="jquery j-19"> clone</button>
+                <button class="vanilla v-19" style="margin-left:20px"> clone</button>
+
+                <ul class="ul-f19">
+                    <li class="li-f19">
+                        <div class="jquery" style="background-color:red">reference item</div>
+                    </li>
+                </ul>
+            </li>
             </ul>
 
         </section>

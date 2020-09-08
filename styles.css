@@ -7,13 +7,11 @@ body {
     color: lightgreen;
 }
 
-
 ul {
     list-style-type: none;
 }
 
 label {
-
     font-size: 13px;
 }
 
@@ -38,7 +36,6 @@ main h2 {
 
 .events-wrapper,
 .functionsSelectors-wrapper {
-
     list-style-type: none;
     display: inline-block;
 }
@@ -78,7 +75,6 @@ main h2 {
 }
 
 .jquery-btn:hover {
-
     background-color: rgb(144, 238, 144, 0.5);
 }
 
@@ -99,22 +95,22 @@ main h2 {
 }
 
 .v11-hover1 {
-
     /*position: relative;*/
     opacity: 0;
     transition: opacity 0.5s linear 0.5s;
 
 }
 
-
-.ul-f14 {
+.ul-f14,
+.ul-f17,
+.ul-f19 {
     display: flex;
     flex-direction: column;
-
 }
 
-.ul-f14 li {
-
+.ul-f14 li,
+.ul-f17 li,
+.ul-f19 li {
     margin-top: 20px
 }
 
@@ -124,9 +120,7 @@ main h2 {
     margin: 20px auto;
     /*Fallback if gradeints don't work */
     background: #9b59b6;
-
     background: radial-gradient(at left, #3498db, #9b59b6);
-
 }
 
 button {
@@ -150,7 +144,6 @@ button {
 }
 
 .jquery-info-window {
-
     position: fixed;
     top: 150px;
     left: 50%;

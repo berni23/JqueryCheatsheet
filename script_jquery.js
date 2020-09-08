@@ -1,9 +1,7 @@
 $(function () {
 
-
     let infoWindow = $('.jquery-info-window')
     let infoTimer;
-
 
     /* 1 - events */
 
@@ -29,29 +27,15 @@ $(function () {
 
     $(".j-6").on("input", () => message("User said : " + $('.j-6').val()))
 
-    let arrJ7 = ["images/lion.jpg", "images/monkey.jpg", "images/tiger.jpg"]
-    let imgJ7 = 0
-    let error = "images/error.png"
+    $(".img-e7").on("load", () => message("image succesfully loaded"))
+    $(".img-e7").on("error", () => {
 
-    $(".j-7").click(function () {
-
-
-        $('.img-e7').attr("src", arrJ7[imgJ7]);
-
-        if (!arrJ7[imgJ7]) {
-            message("image could not be uploaded");
-            $('.img-e7').attr("src", error);
-            imgJ7 = 0;
-        }
-
-        imgJ7++
+        message("image could not be loaded")
     })
-
 
     $(".j-9").submit(() => message("form submitted!"))
 
     $(".j-10").change(() => message(" you choosed " + $(this).children().find(":selected").text()))
-
 
     let move = true;
     $(".j-11").mouseover(function () {
@@ -66,9 +50,7 @@ $(function () {
                 top: "-=30px",
             }, 500);
             move = true
-
         }
-
     })
 
     $(".j-12").change(function () {
@@ -76,18 +58,14 @@ $(function () {
         console.log('jquery checkbox')
         let value = ''
         if ($(this).prop('checked')) value = 'checked'
-
         else value = 'unchecked'
-
         message("checkbox " + value + "!")
 
     })
 
     $(".j-13").click(function (event) {
 
-        if (event.target != event.currentTarget) {
-            message(event.target.textContent + " clicked!")
-        }
+        if (event.target != event.currentTarget) message(event.target.textContent + " clicked!")
     })
     /* 2 - functions and selectors*/
 
@@ -95,11 +73,43 @@ $(function () {
     $(".j-14").click(() => {
 
         let appended = listF14.children().length + 1
-        listF14.append($(`<li><div class = "jquery">${appended} elements appended</div></li>`))
+        listF14.append($(`<li><div class = "jquery">${appended} elements created</div></li>`))
+        message("element appended using jquery")
+
     })
 
-    $('.reset-f14').click(() => listF14.empty())
+    $('.j-15').click(function () {
 
+        if (listF14.children().length) {
+            let children = listF14.children()
+            children[children.length - 1].remove()
+            message("element removed using jquery")
+        }
+    })
+
+    $('.j-16').click(function () {
+
+        let prepended = listF14.children().length + 1
+        listF14.prepend($(`<li><div class = "jquery">${prepended} elements created</div></li>`))
+        message("element prepended using jquery")
+    })
+
+    liF17 = $('.li-f17')
+    $(".j-17").click(function () {
+        liF17.before($(`<li><div class = "jquery">added before</div></li>`))
+    })
+
+    $(".j-18").click(function () {
+        liF17.after($(`<li><div class = "jquery">added after</div></li>`))
+    })
+
+    let ulF19 = $(".ul-f19");
+    let liF19 = $(".li-f19");
+    $(".j-19").click(function () {
+
+        let cloned = liF19.clone()
+        ulF19.append(cloned)
+    })
 
     /* UTILS*/
 
@@ -110,6 +120,5 @@ $(function () {
         clearTimeout(infoTimer);
         infoTimer = setTimeout(() => infoWindow.removeClass("show-info"), 1500);
     }
-
 
 })
