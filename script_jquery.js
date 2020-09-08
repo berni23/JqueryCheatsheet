@@ -144,6 +144,49 @@ $(function () {
     $(".j-27").click(() => j27Div.addClass('hidden'))
     $(".j-28").click(() => j27Div.removeClass('hidden'))
 
+
+    let j29Div = $(".j-29-div")
+
+    $(".j-29").click(() => j29Div.fadeIn(500))
+
+    $(".j-30").click(() => j29Div.fadeOut(500))
+
+
+    let collectionJ31 = $(".ref-31-div");
+
+    $(".j-31").click(function () {
+
+        for (i = 0; i < collectionJ31.length; i++) {
+            $(collectionJ31[i]).css({
+                backgroundColor: "lightgreen",
+                color: "white"
+            })
+        }
+    })
+
+    let f32 = $(".f-32-span")
+    $(".j-32").click(() => f32.parent().css("fontWeight", "bold"))
+    let f33 = $(".f-33-ul");
+    let children33 = f33.children()
+
+
+    $(".j-33").click(function () {
+        for (i = 0; i < children33.length; i++) {
+            $(children33[i]).css('fontWeight', "bold")
+
+        }
+    })
+
+    let ref34Div = $(".ref-34-div")
+    $(".j-34").click(function () {
+
+        for (i = 0; i < ref34Div.length; i++) {
+
+            $(ref24Div[i]).css('fontWeight', bold)
+        }
+    })
+
+
     /* UTILS*/
     function message(msg) {
         infoWindow.text(msg);

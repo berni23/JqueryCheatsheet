@@ -13,13 +13,15 @@ document.addEventListener('keydown', () => document.querySelector('.v-4').textCo
 document.querySelector(".v-5").addEventListener('mousemove',
 
     function (event) {
-        let width = $(this).innerWidth();
-        let height = $(this).innerHeight();
+        let width = this.offsetWidth;
+        let height = this.offsetHeight;
 
         let position = [event.target.offsetTop, event.target.offsetLeft]
         mouseXpercentage = Math.round(((event.pageX - position[1]) / width * 100));
         mouseYpercentage = Math.round(event.pageY - position[0] / height * 100);
-        $(this).css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, #3498db, #9b59b6)');
+        this.style.background = 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, #3498db, #9b59b6)';
+
+        //console.log(this)
     }
 )
 
@@ -157,12 +159,12 @@ document.querySelector(".v-24").addEventListener("click", () => v23Btn.removeAtt
 let f25Img = document.querySelector('.f-25-img');
 
 document.querySelector(".v-25").addEventListener("click", function () {
-
     f25Img.setAttribute("data-src", "images/monkey.png");
     message("data source set to " + f25Img.getAttribute("data-src"))
 })
-document.querySelector(".v-26").addEventListener("click", function () {
 
+
+document.querySelector(".v-26").addEventListener("click", function () {
     f25Img.removeAttribute("data-src", "images/monkey.png");
     message("data source removed")
 
@@ -172,6 +174,38 @@ let v27Div = document.querySelector(".v-27-div")
 
 document.querySelector(".v-27").addEventListener("click", () => v27Div.classList.add('hidden'))
 document.querySelector(".v-28").addEventListener("click", () => v27Div.classList.remove('hidden'))
+
+let collectionJ31 = Array.from(document.getElementsByClassName("ref-31-div"));
+
+console.log(collectionJ31)
+document.querySelector(".v-31").addEventListener("click", () => collectionJ31.forEach(function (el) {
+    el.style.color = "lightgreen"
+    el.style.backgroundColor = "white"
+}))
+
+
+let f32 = document.querySelector(".f-32-span")
+
+document.querySelector(".v-32").addEventListener("click", () => f32.parentElement.style.fontWeight = "normal")
+
+
+let f33 = document.querySelector(".f-33-ul");
+
+document.querySelector(".v-33").addEventListener("click", () => Array.from(f33.children).forEach((el) => el.style.fontWeight = "normal"))
+
+
+
+/*let ref34Div = document.querySelector(".ref-34-div")
+document.querySelector((".j-34").click(function () {
+
+    for (i = 0; i < ref34Div.length; i++) {
+
+        document.querySelector('(ref24Div[i]).css('
+            fontWeight ', bold)
+        }
+    })
+
+    */
 /*UTILS*/
 
 function message(msg) {
