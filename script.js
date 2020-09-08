@@ -49,7 +49,7 @@ document.querySelector(".v-7").addEventListener("click", function () {
 document.querySelector(".v-9").addEventListener("submit", () => message("form submitted!"))
 
 let v10 = document.querySelector(".v-10")
-v10.addEventListener("change", () => message(" you choosed " + v9.value))
+v10.addEventListener("change", () => message(" you choosed " + v10.value))
 
 
 let v11 = document.querySelector(".v-11")
@@ -130,6 +130,7 @@ document.querySelector(".v-18").addEventListener("click", function () {
 
 let liF19 = document.querySelector(".li-f19")
 let ulF19 = document.querySelector(".ul-f19")
+
 document.querySelector(".v-19").addEventListener("click", function () {
 
     let clone = liF19.cloneNode(true)
@@ -137,6 +138,41 @@ document.querySelector(".v-19").addEventListener("click", function () {
 
 })
 
+let v20Div = document.querySelector(".v-20-div");
+
+document.querySelector(".v-20").addEventListener("click", () => v20Div.classList.add("class20"))
+document.querySelector(".v-21").addEventListener("click", () => v20Div.classList.remove("class20"))
+document.querySelector(".v-22").addEventListener("click", () => v20Div.classList.toggle("class20"))
+
+let v23Btn = document.querySelector(".v-23-btn")
+
+document.querySelector(".v-23").addEventListener("click", () => v23Btn.setAttribute('disabled', true))
+
+v23Btn.addEventListener("click", () => message("I'm not disabled =)"))
+
+document.querySelector(".v-24").addEventListener("click", () => v23Btn.removeAttribute('disabled'))
+
+
+
+let f25Img = document.querySelector('.f-25-img');
+
+document.querySelector(".v-25").addEventListener("click", function () {
+
+    f25Img.setAttribute("data-src", "images/monkey.png");
+    message("data source set to " + f25Img.getAttribute("data-src"))
+})
+document.querySelector(".v-26").addEventListener("click", function () {
+
+    f25Img.removeAttribute("data-src", "images/monkey.png");
+    message("data source removed")
+
+})
+
+let v27Div = document.querySelector(".v-27-div")
+
+document.querySelector(".v-27").addEventListener("click", () => v27Div.classList.add('hidden'))
+document.querySelector(".v-28").addEventListener("click", () => v27Div.classList.remove('hidden'))
+/*UTILS*/
 
 function message(msg) {
     infoWindow.textContent = msg;

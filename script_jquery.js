@@ -111,8 +111,40 @@ $(function () {
         ulF19.append(cloned)
     })
 
-    /* UTILS*/
+    let j20Div = $(".j-20-div");
 
+    $(".j-20").click(() => j20Div.addClass("class20"))
+    $(".j-21").click(() => j20Div.removeClass("class20"))
+    $(".j-22").click(() => j20Div.toggleClass("class20"))
+
+    let j23Btn = $(".j-23-btn")
+
+    $(".j-23").click(() => j23Btn.prop('disabled', true))
+    $(".j-23-btn").click(() => message("im not disabled =)"))
+    $(".j-24").click(function () {
+        j23Btn.prop('disabled', false)
+        j23Btn.removeAttr('disabled')
+    })
+
+    let f25Img = $('.f-25-img')
+    $(".j-25").click(function () {
+
+        f25Img.attr("data-src", "images/tiger.png");
+        message("data source set to " + f25Img.attr("data-src"))
+    })
+    $(".j-26").click(function () {
+
+        f25Img.removeData('src')
+        f25Img.removeAttr('data-src')
+        message("data source removed")
+
+    })
+
+    let j27Div = $(".j-27-div")
+    $(".j-27").click(() => j27Div.addClass('hidden'))
+    $(".j-28").click(() => j27Div.removeClass('hidden'))
+
+    /* UTILS*/
     function message(msg) {
         infoWindow.text(msg);
         console.log(msg)
@@ -120,5 +152,4 @@ $(function () {
         clearTimeout(infoTimer);
         infoTimer = setTimeout(() => infoWindow.removeClass("show-info"), 1500);
     }
-
 })
