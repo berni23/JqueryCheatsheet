@@ -12,7 +12,10 @@ ul {
     list-style-type: none;
 }
 
+label {
 
+    font-size: 13px;
+}
 
 header {
     position: fixed;
@@ -47,7 +50,8 @@ main h2 {
     box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.3);
     border-radius: 7%;
     margin-bottom: 50px;
-    padding: 30px
+    padding: 30px;
+    width: fit-content;
 }
 
 .jquery {
@@ -89,6 +93,19 @@ main h2 {
     padding: auto;
 }
 
+.v-11 {
+    transition: opacity 0.5s linear 0.5s;
+
+}
+
+.v11-hover1 {
+
+    /*position: relative;*/
+    opacity: 0;
+    transition: opacity 0.5s linear 0.5s;
+
+}
+
 
 .ul-f14 {
     display: flex;
@@ -107,19 +124,14 @@ main h2 {
     margin: 20px auto;
     /*Fallback if gradeints don't work */
     background: #9b59b6;
-    /*Linear gradient... */
-    background: radial-gradient(at left, #3498db, #9b59b6);
 
-    /* radial-gradient(at center, #3498db, #9b59b6);*/
+    background: radial-gradient(at left, #3498db, #9b59b6);
 
 }
 
 button {
-
     outline: none !important;
-
 }
-
 
 .info-window {
     position: fixed;
@@ -164,8 +176,6 @@ button {
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
     z-index: 2;
 }
-
-
 
 
 .hidden {

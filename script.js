@@ -26,6 +26,53 @@ document.querySelector(".v-5").addEventListener('mousemove',
 
 let v6 = document.querySelector(".v-6")
 v6.addEventListener("input", () => message("User said: " + v6.value))
+
+
+
+let arrV7 = ["images/earth.jpg", "images/moon.jpg", "images/saturn.jpeg"]
+let error = "images/error.png"
+let imgV7 = 0
+let imgE7 = document.querySelector(".img-e7")
+
+document.querySelector(".v-7").addEventListener("click", function () {
+
+    imgE7.src = arrV7[imgV7];
+    if (!arrV7[imgV7]) {
+        message("image could not be loaded")
+        imgV7 = 0;
+        imgE7.src = error
+    }
+
+    imgV7++
+})
+
+document.querySelector(".v-9").addEventListener("submit", () => message("form submitted!"))
+
+let v10 = document.querySelector(".v-10")
+v10.addEventListener("change", () => message(" you choosed " + v9.value))
+
+
+let v11 = document.querySelector(".v-11")
+
+v11.addEventListener("mouseover", () => v11.classList.toggle("v11-hover1"))
+
+
+document.querySelector(".v-12").addEventListener('change', function () {
+
+    let value = ""
+    if (this.checked) value = 'checked'
+    else value = 'unchecked'
+    message("checkbox " + value + "!")
+
+})
+
+document.querySelector(".v-13").addEventListener("click", function (event) {
+
+    if (event.target != event.currentTarget) {
+        message(event.target.textContent + " clicked!")
+    }
+})
+
 /* 2 - functios and selectors*/
 
 

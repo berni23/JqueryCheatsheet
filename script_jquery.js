@@ -29,7 +29,67 @@ $(function () {
 
     $(".j-6").on("input", () => message("User said : " + $('.j-6').val()))
 
-    /* 2 - functions and slelectors*/
+    let arrJ7 = ["images/lion.jpg", "images/monkey.jpg", "images/tiger.jpg"]
+    let imgJ7 = 0
+    let error = "images/error.png"
+
+    $(".j-7").click(function () {
+
+
+        $('.img-e7').attr("src", arrJ7[imgJ7]);
+
+        if (!arrJ7[imgJ7]) {
+            message("image could not be uploaded");
+            $('.img-e7').attr("src", error);
+            imgJ7 = 0;
+        }
+
+        imgJ7++
+    })
+
+
+    $(".j-9").submit(() => message("form submitted!"))
+
+    $(".j-10").change(() => message(" you choosed " + $(this).children().find(":selected").text()))
+
+
+    let move = true;
+    $(".j-11").mouseover(function () {
+
+        if (move) {
+            $(this).animate({
+                top: "+=30px"
+            }, 500);
+            move = false
+        } else {
+            $(this).animate({
+                top: "-=30px",
+            }, 500);
+            move = true
+
+        }
+
+    })
+
+    $(".j-12").change(function () {
+
+        console.log('jquery checkbox')
+        let value = ''
+        if ($(this).prop('checked')) value = 'checked'
+
+        else value = 'unchecked'
+
+        message("checkbox " + value + "!")
+
+    })
+
+    $(".j-13").click(function (event) {
+
+        if (event.target != event.currentTarget) {
+            message(event.target.textContent + " clicked!")
+        }
+    })
+    /* 2 - functions and selectors*/
 
     let listF14 = $('.ul-f14')
     $(".j-14").click(() => {
@@ -41,7 +101,6 @@ $(function () {
     $('.reset-f14').click(() => listF14.empty())
 
 
-
     /* UTILS*/
 
     function message(msg) {
@@ -51,7 +110,6 @@ $(function () {
         clearTimeout(infoTimer);
         infoTimer = setTimeout(() => infoWindow.removeClass("show-info"), 1500);
     }
-
 
 
 })
