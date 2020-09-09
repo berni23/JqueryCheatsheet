@@ -9,10 +9,8 @@ body {
 }
 
 main {
-
     opacity: 0;
     margin-top: 0;
-
 }
 
 .main-onLoad {
@@ -119,7 +117,6 @@ main h2 {
 }
 
 .v11-hover1 {
-    /*position: relative;*/
     opacity: 0;
     transition: opacity 0.5s linear 0.5s;
 
@@ -148,7 +145,7 @@ main h2 {
 
     padding: 80px;
     margin: 20px auto;
-    /*Fallback if gradeints don't work */
+    /*Fallback if gradients don't work */
     background: #9b59b6;
     background: radial-gradient(at left, #3498db, #9b59b6);
 }
@@ -195,7 +192,8 @@ button {
 .show-info {
     opacity: 1;
     visibility: visible;
-    display: inline transform: scale(1.0);
+    display: inline;
+    transform: scale(1.0);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
     z-index: 2;
 }
