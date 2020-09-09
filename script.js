@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let before = document.createElement('li')
         before.innerHTML = `<div class = "vanilla">added before</div>`
-        let insertedNode = ulF17.insertBefore(before, liF17.get(0))
+        let insertedNode = ulF17.insertBefore(before, liF17)
 
     })
 
@@ -247,7 +247,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.querySelector('.v-40').addEventListener("click", function () {
 
-        console.log("event triggered")
         let inputRemove = document.querySelectorAll('li>span[style*="color:green"]')
         for (let i = 0; i < inputRemove.length; i++) inputRemove[i].remove()
 
@@ -262,7 +261,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function message(msg) {
         infoWindow.textContent = msg;
-        console.log(msg)
         infoWindow.classList.add("show-info");
         clearTimeout(infoTimer);
         infoTimer = setTimeout(() => infoWindow.classList.remove("show-info"), 1500);

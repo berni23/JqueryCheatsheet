@@ -8,20 +8,18 @@ body {
 
 }
 
-
-
 main {
 
     opacity: 0;
-    margin-right: 200;
+    margin-top: 0;
+
 }
 
 .main-onLoad {
 
     opacity: 1;
-    margin-right: 0;
-    transition: opacity .2s linear;
-    /* transition: margin-right 1s linear 1s;*/
+    margin-top: 200px;
+    transition: margin-top 1s, opacity 1s;
 }
 
 ul {
@@ -32,10 +30,7 @@ label {
     font-size: 13px;
 }
 
-
 .ref {
-
-
     display: inline-block;
     background-color: red;
     color: white;

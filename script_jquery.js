@@ -143,11 +143,9 @@ $(function () {
     $(".j-27").click(() => j27Div.addClass('hidden'))
     $(".j-28").click(() => j27Div.removeClass('hidden'))
 
-
     let j29Div = $(".j-29-div")
 
     $(".j-29").click(() => j29Div.fadeIn(500))
-
     $(".j-30").click(() => j29Div.fadeOut(500))
 
 
@@ -197,11 +195,9 @@ $(function () {
     })
 
 
-
     $('.j-37').click(function () {
 
         let selected37 = $('.select-37 > option:checked')
-        console.log("event triggered")
         let strSelected = "Selected options "
         for (i = 0; i < selected37.length; i++) {
 
@@ -213,9 +209,7 @@ $(function () {
 
     $('.j-38').click(function () {
 
-
         $(".f-38-ul:first a").attr("href", "http://www.assemblerschool.com/")
-
         message(" first link changed to assembler website")
 
     })
@@ -245,12 +239,11 @@ $(function () {
 
             1000
         )
-    }), 2000
+    }, 2000)
 
     /* UTILS*/
     function message(msg) {
         infoWindow.text(msg);
-        console.log(msg)
         infoWindow.addClass("show-info");
         clearTimeout(infoTimer);
         infoTimer = setTimeout(() => infoWindow.removeClass("show-info"), 1500);
