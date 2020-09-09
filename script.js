@@ -4,8 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let infoWindow = document.querySelector('.info-window');
     let infoTimer;
 
-    // v-n means dealing with exercise n in javascript vanilla
-
+    // v-n  label states for exercise  n performed using javascript vanilla
 
     /*------------------------------
     1-Events
@@ -152,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let after = document.createElement('li')
         after.innerHTML = `<div class = "vanilla">added after</div>`
-        insertAfter(after, liF17.get(0))
+        insertAfter(after, liF17)
 
     })
 
@@ -208,7 +207,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".v-27").addEventListener("click", () => v27Div.classList.add('hidden'))
     // v28---------------------------------
     document.querySelector(".v-28").addEventListener("click", () => v27Div.classList.remove('hidden'))
+
     //( 29 and 30 are only for jquery)
+
     // v31---------------------------------
     let collectionJ31 = Array.from(document.getElementsByClassName("ref-31-div"));
 
@@ -217,29 +218,33 @@ document.addEventListener("DOMContentLoaded", function () {
         el.style.backgroundColor = "white"
     }))
 
-
+    // v32---------------------------------
     let f32 = document.querySelector(".f-32-span")
 
     document.querySelector(".v-32").addEventListener("click", () => f32.parentElement.style.fontWeight = "normal")
 
+    // v33---------------------------------
     let f33 = document.querySelector(".f-33-ul");
 
     document.querySelector(".v-33").addEventListener("click", () => Array.from(f33.children).forEach((el) => el.style.fontWeight = "normal"))
 
+    // v34---------------------------------
 
-    let ref34Div = document.querySelector(".ref-34-div")
-    document.querySelector(".j-34").addEventListener('click', function () {
+    let ref34Div = document.querySelectorAll(".ref-34-div")
+    document.querySelector(".v-34").addEventListener('click', function () {
 
+        console.log(ref34Div)
         for (i = 0; i < ref34Div.length; i++) {
-
             ref34Div[i].style.fontWeight = "normal"
         }
     })
 
+    // v35---------------------------------
     let font35 = document.getElementById("35-font")
 
     document.querySelector(".v-35").addEventListener("click", () => font35.style.fontWeight = "normal")
 
+    // v36---------------------------------
     let list36None = document.querySelectorAll('[class*="list-36"][style*="display:none"]')
 
     document.querySelector('.v-36').addEventListener("click", function () {
@@ -250,6 +255,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
 
+    // v37---------------------------------
     document.querySelector('.v-37').addEventListener("click", function () {
 
         let selected37 = document.querySelectorAll('.select-37 > option:checked')
@@ -261,6 +267,7 @@ document.addEventListener("DOMContentLoaded", function () {
         message(strSelected)
     })
 
+    // v38---------------------------------
     document.querySelector('.v-38').addEventListener("click", function () {
 
         document.querySelector(".f-38-ul >li>a").setAttribute("href", "http://www.neuralink.com");
@@ -268,11 +275,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     })
 
+    // v39---------------------------------
     document.querySelector('.v-39').addEventListener("click", function () {
         let input = document.querySelector('input');
         window.alert(input.getAttribute("value"))
     })
 
+    // v40---------------------------------
     document.querySelector('.v-40').addEventListener("click", function () {
 
         let inputRemove = document.querySelectorAll('li>span[style*="color:green"]')

@@ -3,7 +3,6 @@ $(function () {
     let infoWindow = $('.jquery-info-window')
     let infoTimer;
 
-
     // j-n  label states for exercise n performed using jquery library
 
     /*
@@ -45,7 +44,7 @@ $(function () {
     //j9 ----------------------------
     $(".j-9").submit(() => message("form submitted!"))
     //j10 ----------------------------
-    $(".j-10").change(() => message(" you choosed " + $(this).children().find(":selected").text()))
+    $(".j-10").change(() => message("you choosed " + $('.j-10').val()))
     //j11 ----------------------------
     let move = true;
     $(".j-11").mouseover(function () {
