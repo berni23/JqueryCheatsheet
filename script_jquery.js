@@ -55,7 +55,6 @@ $(function () {
 
     $(".j-12").change(function () {
 
-        console.log('jquery checkbox')
         let value = ''
         if ($(this).prop('checked')) value = 'checked'
         else value = 'unchecked'
@@ -182,10 +181,24 @@ $(function () {
 
         for (i = 0; i < ref34Div.length; i++) {
 
-            $(ref24Div[i]).css('fontWeight', bold)
+            $(ref34Div[i]).css('fontWeight', "bold")
         }
     })
 
+
+    let font35 = $("#35-font")
+
+    $(".j-35").click(() => font35.css("fontWeight", "bold"))
+
+    let list36None = $('[class*="list-36"][style*="display:none"]')
+
+    $('.j-36').click(function () {
+
+        for (let i = 0; i < list36None.length; i++) {
+
+            $(list36None[i]).css("fontWeight", "bold")
+        }
+    })
 
     /* UTILS*/
     function message(msg) {

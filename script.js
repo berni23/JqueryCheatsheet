@@ -20,8 +20,6 @@ document.querySelector(".v-5").addEventListener('mousemove',
         mouseXpercentage = Math.round(((event.pageX - position[1]) / width * 100));
         mouseYpercentage = Math.round(event.pageY - position[0] / height * 100);
         this.style.background = 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, #3498db, #9b59b6)';
-
-        //console.log(this)
     }
 )
 
@@ -177,7 +175,6 @@ document.querySelector(".v-28").addEventListener("click", () => v27Div.classList
 
 let collectionJ31 = Array.from(document.getElementsByClassName("ref-31-div"));
 
-console.log(collectionJ31)
 document.querySelector(".v-31").addEventListener("click", () => collectionJ31.forEach(function (el) {
     el.style.color = "lightgreen"
     el.style.backgroundColor = "white"
@@ -188,24 +185,36 @@ let f32 = document.querySelector(".f-32-span")
 
 document.querySelector(".v-32").addEventListener("click", () => f32.parentElement.style.fontWeight = "normal")
 
-
 let f33 = document.querySelector(".f-33-ul");
 
 document.querySelector(".v-33").addEventListener("click", () => Array.from(f33.children).forEach((el) => el.style.fontWeight = "normal"))
 
 
-
-/*let ref34Div = document.querySelector(".ref-34-div")
-document.querySelector((".j-34").click(function () {
+let ref34Div = document.querySelector(".ref-34-div")
+document.querySelector(".j-34").addEventListener('click', function () {
 
     for (i = 0; i < ref34Div.length; i++) {
 
-        document.querySelector('(ref24Div[i]).css('
-            fontWeight ', bold)
-        }
-    })
+        ref34Div[i].style.fontWeight = "normal"
+    }
+})
 
-    */
+let font35 = document.getElementById("35-font")
+
+document.querySelector(".v-35").addEventListener("click", () => font35.style.fontWeight = "normal")
+
+
+let list36None = document.querySelectorAll('[class*="list-36"][style*="display:none"]')
+
+document.querySelector('.v-36').addEventListener("click", function () {
+
+    for (let i = 0; i < list36None.length; i++) {
+        list36None[i].style.fontWeight = "normal"
+    }
+})
+
+
+
 /*UTILS*/
 
 function message(msg) {
