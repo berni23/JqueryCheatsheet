@@ -203,15 +203,40 @@ let font35 = document.getElementById("35-font")
 
 document.querySelector(".v-35").addEventListener("click", () => font35.style.fontWeight = "normal")
 
-
 let list36None = document.querySelectorAll('[class*="list-36"][style*="display:none"]')
 
 document.querySelector('.v-36').addEventListener("click", function () {
 
     for (let i = 0; i < list36None.length; i++) {
-        list36None[i].style.fontWeight = "normal"
+        list36None[i].style.color = "blue"
     }
 })
+
+
+document.querySelector('.v-37').addEventListener("click", function () {
+
+    let selected37 = document.querySelectorAll('.select-37 > option:checked')
+    let strSelected = "Selected options "
+    for (i = 0; i < selected37.length; i++) {
+
+        strSelected += selected37[i].textContent + " "
+    }
+    message(strSelected)
+})
+
+
+
+
+
+
+document.querySelector('.v-38').addEventListener("click", function () {
+
+    document.querySelector(".f-38-ul >li>a").setAttribute("href", "http://www.neuralink.com");
+    message(" first link changed to neuralink website")
+
+
+})
+
 
 
 

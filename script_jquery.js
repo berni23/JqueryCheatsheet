@@ -185,19 +185,39 @@ $(function () {
         }
     })
 
-
     let font35 = $("#35-font")
-
     $(".j-35").click(() => font35.css("fontWeight", "bold"))
-
     let list36None = $('[class*="list-36"][style*="display:none"]')
 
     $('.j-36').click(function () {
 
         for (let i = 0; i < list36None.length; i++) {
-
-            $(list36None[i]).css("fontWeight", "bold")
+            $(list36None[i]).css("color", "green")
         }
+    })
+
+
+
+    $('.j-37').click(function () {
+
+        let selected37 = $('.select-37 > option:checked')
+        console.log("event triggered")
+        let strSelected = "Selected options "
+        for (i = 0; i < selected37.length; i++) {
+
+            strSelected += selected37.text() + " "
+        }
+        message(strSelected)
+    })
+
+
+    $('.j-38').click(function () {
+
+        console.log("event triggered")
+        $(".f-38-ul:first a").attr("href", "http://www.assemblerschool.com/")
+
+        message(" first link changed to assembler website")
+
     })
 
     /* UTILS*/
