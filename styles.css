@@ -5,6 +5,23 @@ body {
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     color: lightgreen;
+
+}
+
+
+
+main {
+
+    opacity: 0;
+    margin-right: 200;
+}
+
+.main-onLoad {
+
+    opacity: 1;
+    margin-right: 0;
+    transition: opacity .2s linear;
+    /* transition: margin-right 1s linear 1s;*/
 }
 
 ul {

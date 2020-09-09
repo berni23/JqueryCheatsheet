@@ -213,12 +213,39 @@ $(function () {
 
     $('.j-38').click(function () {
 
-        console.log("event triggered")
+
         $(".f-38-ul:first a").attr("href", "http://www.assemblerschool.com/")
 
         message(" first link changed to assembler website")
 
     })
+
+
+    $('.j-39').click(function () {
+
+        let input = $('input:first')
+        window.alert(input.attr("value"))
+    })
+
+    $('.j-40').click(function () {
+        let inputRemove = $('li>span[style*="color:blue"]')
+        for (let i = 0; i < inputRemove.length; i++) $(inputRemove[i]).remove()
+
+    })
+
+
+    setTimeout(function () {
+
+        $('.title').animate({
+
+                opacity: "1",
+                marginRight: "0",
+                display: "visible",
+            },
+
+            1000
+        )
+    }), 2000
 
     /* UTILS*/
     function message(msg) {
