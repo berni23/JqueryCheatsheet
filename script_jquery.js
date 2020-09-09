@@ -186,7 +186,6 @@ $(function () {
     let f33 = $(".f-33-ul");
     let children33 = f33.children()
 
-
     $(".j-33").click(function () {
         for (i = 0; i < children33.length; i++) {
             $(children33[i]).css('fontWeight', "bold")
